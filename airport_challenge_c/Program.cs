@@ -24,15 +24,13 @@ namespace airport_challenge_c
 			a.Land ();
 			a.Land ();
 			a.Land ();
-			Console.WriteLine (a.planes.Count);
+			Console.WriteLine (a.planes.Count + " Planes at the airport");
 			a.ReleasePlane ();
 			a.ReleasePlane ();
 			a.ReleasePlane ();
 			a.ReleasePlane ();
-			Console.WriteLine (a.planes.Count);
+			Console.WriteLine (a.planes.Count + " Planes at the airport");
 			a.ReleasePlane ();
-
-
 		}
 	}
 
@@ -87,6 +85,7 @@ namespace airport_challenge_c
 				Console.WriteLine ("The airport is full");
 			} else {
 				planes.Add (1);
+				Console.WriteLine ("Plane landing");
 			}
 		}
 
@@ -97,6 +96,7 @@ namespace airport_challenge_c
 				Console.WriteLine ("There are no planes on the airfield");
 			} else {
 				planes.Remove (1);
+				Console.WriteLine ("Plane released");
 			}
 		}
 
