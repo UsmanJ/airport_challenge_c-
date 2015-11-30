@@ -26,28 +26,49 @@ The airport control system is fully functional; however if you feel that their a
 Steps of using the control system
 ---------------------------------
 ```
-	Airport a = new Airport ();
-	Plane p = new Plane ();
-	Plane p1 = new Plane ();
-	Plane p2 = new Plane ();
-	a.Land ();
-	p.Land ();
-	a.Land ();
-	p1.Land ();
-	a.Land ();
-	p2.Land ();
-	p.isFlying ();
-	p.isLanded ();
-	p.TakeOff ();
-	p.isLanded ();
+Airport a = new Airport ();
+Plane p = new Plane ();
+Plane p1 = new Plane ();
+Plane p2 = new Plane ();
+a.Land ();
+p.Land ();
+a.Land ();
+p1.Land ();
+a.Land ();
+p2.Land ();
+p.isFlying ();
+p.isLanded ();
+p.TakeOff ();
+p.isLanded ();
 
-	Console.WriteLine ();
+Console.WriteLine ();
 
-	a.ReleasePlane ();
-	Console.WriteLine (a.planes.Count + " Planes at the airport");
-	a.ReleasePlane ();
-	Console.WriteLine (a.planes.Count + " Planes at the airport");
-	a.ReleasePlane ();
-	Console.WriteLine (a.planes.Count + " Planes at the airport");
-	a.ReleasePlane ();
+a.ReleasePlane ();
+Console.WriteLine (a.planes.Count + " Planes at the airport");
+a.ReleasePlane ();
+Console.WriteLine (a.planes.Count + " Planes at the airport");
+a.ReleasePlane ();
+Console.WriteLine (a.planes.Count + " Planes at the airport");
+a.ReleasePlane ();
+```
+
+Results of the above steps
+---------------------------------
+```
+Plane landing
+Plane has landed
+Plane landing
+Plane has landed
+Plane flying = False
+Plane is currently landed
+Plane has taken off
+Plane is currently airbourne
+
+Plane released
+2 Planes at the airport
+Plane released
+1 Planes at the airport
+Plane released
+0 Planes at the airport
+There are no planes on the airfield
 ```
