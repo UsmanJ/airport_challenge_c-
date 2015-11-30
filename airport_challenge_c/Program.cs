@@ -7,30 +7,31 @@ namespace airport_challenge_c
 	{
 		public static void Main (string[] args)
 		{
+			Airport a = new Airport ();
 			Plane p = new Plane ();
 			Plane p1 = new Plane ();
 			Plane p2 = new Plane ();
+			a.Land ();
 			p.Land ();
+			a.Land ();
 			p1.Land ();
+			a.Land ();
 			p2.Land ();
-			Console.WriteLine (p.flying);
+			p.isFlying ();
 			p.isLanded ();
 			p.TakeOff ();
 			p.isLanded ();
 
 			Console.WriteLine ();
 
-			Airport a = new Airport ();
-			a.Land ();
-			a.Land ();
-			a.Land ();
-			Console.WriteLine (a.planes.Count + " Planes at the airport");
-			a.ReleasePlane ();
-			a.ReleasePlane ();
-			a.ReleasePlane ();
 			a.ReleasePlane ();
 			Console.WriteLine (a.planes.Count + " Planes at the airport");
 			a.ReleasePlane ();
+			Console.WriteLine (a.planes.Count + " Planes at the airport");
+			a.ReleasePlane ();
+			Console.WriteLine (a.planes.Count + " Planes at the airport");
+			a.ReleasePlane ();
+
 		}
 	}
 
@@ -60,7 +61,7 @@ namespace airport_challenge_c
 
 		public void isFlying ()
 		{
-			Console.WriteLine (flying);
+			Console.WriteLine ("Plane flying = " + flying);
 		}
 
 		public void isLanded	()
