@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace airport_challenge_c
 {
@@ -7,7 +8,11 @@ namespace airport_challenge_c
 		public static void Main (string[] args)
 		{
 			Plane p = new Plane ();
+			Plane p1 = new Plane ();
+			Plane p2 = new Plane ();
 			p.Land ();
+			p1.Land ();
+			p2.Land ();
 			Console.WriteLine (p.flying);
 			p.isLanded ();
 			p.TakeOff ();
@@ -17,7 +22,17 @@ namespace airport_challenge_c
 
 			Airport a = new Airport ();
 			a.Land ();
-			a.planes ();
+			a.Land ();
+			a.Land ();
+			Console.WriteLine (a.planes.Count);
+			a.ReleasePlane ();
+			a.ReleasePlane ();
+			a.ReleasePlane ();
+			a.ReleasePlane ();
+			Console.WriteLine (a.planes.Count);
+			a.ReleasePlane ();
+
+
 		}
 	}
 
@@ -63,18 +78,25 @@ namespace airport_challenge_c
 
 	class Airport
 	{
-		public int[] planes = new int[80];
+		public List<int> planes = new List<int> ();
 
 		public void Land ()
 		{
-			if(planes.length() >= 80)
+			if(planes.Count >= 80)
 			{
 				Console.WriteLine ("The airport is full");
 			} else {
-				for (int plane = 0; plane <= 80; plane++)
-				{
-					planes[plane] = 1;
-				}
+				planes.Add (1);
+			}
+		}
+
+		public void ReleasePlane ()
+		{
+			if(planes.Count <= 0)
+			{
+				Console.WriteLine ("There are no planes on the airfield");
+			} else {
+				planes.Remove (1);
 			}
 		}
 
