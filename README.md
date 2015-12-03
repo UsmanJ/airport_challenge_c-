@@ -11,8 +11,7 @@ The task set was to build an air traffic controller as I had done before but thi
 - Airport can not release plane if it is empty
 - Plane can not take off when weather is stormy
 
-Other conditions exist but they are more common sense i.e. plane can't land if it has already landed.
-The maximum capacity of this airport was set to 80 planes. 
+Other conditions exist but they are more common sense i.e. plane can't land if it has already landed. The maximum capacity of this airport was set to 80 planes. 
 
 
 Approach towards solving the challenge
